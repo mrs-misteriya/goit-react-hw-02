@@ -1,14 +1,22 @@
-export default function Options() { 
-//     const updateFeedback = feedbackType => {
-//  // Тут використовуй сеттер, щоб оновити стан
-// }
+import css from "./Options.module.css";
 
-    return (
-        <div>
-            <button>Good</button>
-            <button>Neutral</button>
-            <button>Bad</button>
-            {/* <button>Reset</button> */}
-        </div>
-    )
+export default function Options({ onUpdate, total, onReset }) {
+  return (
+    <div className={css.container}>
+      <button className={css.btn} onClick={() => onUpdate("good")}>
+        Good
+      </button>
+      <button className={css.btn} onClick={() => onUpdate("neutral")}>
+        Neutral
+      </button>
+      <button className={css.btn} onClick={() => onUpdate("bad")}>
+        Bad
+      </button>
+      {total !== 0 && (
+        <button className={css.btn} onClick={onReset}>
+          Reset
+        </button>
+      )}
+    </div>
+  );
 }

@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    gap: 5px;
+    letter-spacing: -0.05em;
+    }
+
+.btn {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 0.6em 1em;
+}
+
+.btn:hover{
+    background-color: rgb(230, 227, 227);
+    
+}
+
